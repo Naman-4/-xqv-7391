@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber Shop</title>
+</head>
+<body>
+    <!-- ================= NAVBAR ================= -->
+    <nav>
+        <!-- Logo -->
+        <div class="logo">
+            <h2>✂️ BARBER SHOP</h2>
+        </div>
+        <!-- Navigation Links -->
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#barbers">Barbers</a>
+            <a href="#booking">Booking</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    <!-- ================= HOME / HERO ================= -->
+    <section id="home">
+        <h1>Look Sharp. Feel Confident.</h1>
+        <p>
+            Professional haircuts and grooming services
+            for men who want to look their best.
+        </p>
+        <button>Book Appointment</button>
+    </section>
+    <!-- ================= SERVICES ================= -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service">
+                <h3>Haircut</h3>
+                <p>Professional haircut by experienced barbers.</p>
+                <p>₹200</p>
+            </div>
+            <div class="service">
+                <h3>Beard Trim</h3>
+                <p>Clean and stylish beard trimming.</p>
+                <p>₹100</p>
+            </div>
+            <div class="service">
+                <h3>Hair + Beard</h3>
+                <p>Complete haircut and beard grooming.</p>
+                <p>₹250</p>
+            </div>
+        </div>
+    </section>
+    <!-- ================= BARBERS ================= -->
+    <section id="barbers">
+        <h2>Our Barbers</h2>
+        <div class="barber-container">
+            <div class="barber">
+                <h3>Rahul</h3>
+                <p>Senior Barber</p>
+                <p>5 Years Experience</p>
+            </div>
+            <div class="barber">
+                <h3>Aman</h3>
+                <p>Stylist</p>
+                <p>3 Years Experience</p>
+            </div>
+            <div class="barber">
+                <h3>Vikas</h3>
+                <p>Barber</p>
+                <p>4 Years Experience</p>
+            </div>
+        </div>
+    </section>
+    <!-- ================= BOOKING ================= -->
+    <section id="booking">
+        <h2>Book Your Appointment</h2>
+        <form>
+            <label for="name">Your Name:</label>
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+            >
+            <br><br>
+            <label for="phone">Phone:</label>
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Enter phone number"
+            >
+            <br><br>
+            <label for="barber">Choose Barber:</label>
+            <select id="barber">
+                <option value="">Select Barber</option>
+                <option value="rahul">Rahul</option>
+                <option value="aman">Aman</option>
+                <option value="vikas">Vikas</option>
+            </select>
+            <br><br>
+            <label for="service">Choose Service:</label>
+            <select id="service">
+                <option value="">Select Service</option>
+                <option value="haircut">Haircut</option>
+                <option value="beard">Beard Trim</option>
+                <option value="hair-beard">Hair + Beard</option>
+            </select>
+            <br><br>
+            <label for="date">Select Date:</label>
+            <input
+                type="date"
+                id="date"
+            >
+            <br><br>
+            <label for="time">Select Time:</label>
+            <input
+                type="time"
+                id="time"
+            >
+            <br><br>
+            <button type="submit">
+                Book Appointment
+            </button>
+        </form>
+    </section>
+    <!-- ================= CONTACT ================= -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p><strong>Address:</strong> Main Market, Your City</p>
+        <p><strong>Phone:</strong> +91 9876543210</p>
+        <p><strong>Email:</strong> barber@example.com</p>
+        <p><strong>Opening Hours:</strong> 9:00 AM - 9:00 PM</p>
+    </section>
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>
+            © 2026 Barber Shop. All Rights Reserved.
+        </p>
+    </footer>
+    <script>
+        document.getElementById("contact")
+    </script>
+</body>
+</html>

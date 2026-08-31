@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WebDukaan | Spice Haven Restaurant Demo</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="#home" class="logo">
+                🍽️ Spice Haven
+            </a>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#offers">Offers</a>
+                </li>
+
+                <li>
+                    <a href="#menu">Menu</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+                <li>
+                    <button class="cart-btn" onclick="openCart()">
+                        🛒 Cart
+                        <span id="cartCount">0</span>
+                    </button>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="hero-small">
+                WELCOME TO SPICE HAVEN
+            </p>
+
+            <h1>
+                Delicious Food,
+                <span>Made With Love</span>
+            </h1>
+
+            <p>
+                Fresh ingredients, authentic flavors and
+                unforgettable dining experiences.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#menu" class="btn primary-btn">
+                    🍽️ View Menu
+                </a>
+
+                <a
+                    href="https://wa.me/919835054271"
+                    target="_blank"
+                    class="btn secondary-btn">
+                    💬 Order on WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DEMO NOTICE ================= -->
+
+    <div class="demo-notice">
+
+        💬 <strong>WebDukaan Demo:</strong>
+        Select your food, add it to the cart and send your
+        order directly to WhatsApp.
+
+    </div>
+
+
+    <!-- ================= OFFERS ================= -->
+
+    <section class="section" id="offers">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                SPECIAL OFFERS
+            </p>
+
+            <h2>
+                Today's Delicious Deals 🔥
+            </h2>
+
+            <span>
+                Enjoy our special offers and save more.
+            </span>
+
+        </div>
+
+
+        <div class="offer-container">
+
+            <div class="offer-card">
+
+                <div class="offer-icon">
+                    🍕
+                </div>
+
+                <div>
+
+                    <h3>
+                        Pizza Combo
+                    </h3>
+
+                    <p>
+                        Pizza + Cold Drink
+                    </p>
+
+                    <strong>
+                        ₹299
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="offer-card">
+
+                <div class="offer-icon">
+                    🍔
+                </div>
+
+                <div>
+
+                    <h3>
+                        Burger Combo
+                    </h3>
+
+                    <p>
+                        Burger + Fries + Drink
+                    </p>
+
+                    <strong>
+                        ₹249
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="offer-card">
+
+                <div class="offer-icon">
+                    🍰
+                </div>
+
+                <div>
+
+                    <h3>
+                        Dessert Special
+                    </h3>
+
+                    <p>
+                        Buy 2 desserts
+                    </p>
+
+                    <strong>
+                        ₹199
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MENU ================= -->
+
+    <section class="section menu" id="menu">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                OUR MENU
+            </p>
+
+            <h2>
+                Explore Our Food
+            </h2>
+
+            <span>
+                Choose your favorite dishes.
+            </span>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="menu-search">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search food..."
+            >
+
+        </div>
+
+
+        <!-- CATEGORIES -->
+
+        <div class="categories">
+
+            <button
+                class="category active"
+                data-category="all">
+                All
+            </button>
+
+            <button
+                class="category"
+                data-category="pizza">
+                Pizza
+            </button>
+
+            <button
+                class="category"
+                data-category="burger">
+                Burger
+            </button>
+
+            <button
+                class="category"
+                data-category="pasta">
+                Pasta
+            </button>
+
+            <button
+                class="category"
+                data-category="drinks">
+                Drinks
+            </button>
+
+            <button
+                class="category"
+                data-category="dessert">
+                Dessert
+            </button>
+
+        </div>
+
+
+        <!-- FOOD CARDS -->
+
+        <div class="menu-grid">
+
+
+            <!-- Pizza -->
+
+            <div class="food-card" data-category="pizza">
+
+                <div class="food-image pizza-bg">
+                    🍕
+                </div>
+
+                <div class="food-info">
+
+                    <span class="food-category">
+                        PIZZA
+                    </span>
+
+                    <h3>
+                        Margherita Pizza
+                    </h3>
+
+                    <p>
+                        Fresh tomato, mozzarella and basil.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ₹199
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Margherita Pizza', 199)">
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="food-card" data-category="pizza">
+
+                <div class="food-image pizza-bg">
+                    🍕
+                </div>
+
+                <div class="food-info">
+
+                    <span class="food-category">
+                        PIZZA
+                    </span>
+
+                    <h3>
+                        Farmhouse Pizza
+                    </h3>
+
+                    <p>
+                        Loaded with fresh vegetables and cheese.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ₹299
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Farmhouse Pizza', 299)">
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Burger -->
+
+            <div class="food-card" data-category="burger">
+
+                <div class="food-image burger-bg">
+                    🍔
+                </div>
+
+                <div class="food-info">
+
+                    <span class="food-category">
+                        BURGER
+                    </span>
+
+                    <h3>
+                        Classic Burger
+                    </h3>
+
+                    <p>
+                        Juicy patty with fresh vegetables.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ₹149
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Classic Burger', 149)">
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="food-card" data-category="burger">
+
+                <div class="food-image burger-bg">
+                    🍔
+                </div>
+
+                <div class="food-info">
+
+                    <span class="food-category">
+                        BURGER
+                    </span>
+
+                    <h3>
+                        Cheese Burger
+                    </h3>
+
+                    <p>
+                        Classic burger with melted cheese.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ₹179
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Cheese Burger', 179)">
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Pasta -->
+
+            <div class="food-card" data-category="pasta">
+
+                <div class="food-image pasta-bg">
+                    🍝
+                </div>
+
+                <div class="food-info">
+
+                    <span class="food-category">
+                        PASTA
+                    </span>
+
+                    <h3>
+                        Creamy Alfredo Pasta
+                    </h3>
+
+                    <p>
+                        Creamy white sauce pasta with herbs.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ₹229
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Creamy Alfredo Pasta', 229)">
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Drinks -->
+
+            <div class="food-card" data-category="drinks">
+
+                <div class="food-image drinks-bg">
+                    🥤
+                </div>
+
+                <div class="food-info">
+
+                    <span class="food-category">
+                        DRINKS
+                    </span>
+
+                    <h3>
+                        Cold Drink
+                    </h3>
+
+                    <p>
+                        Refreshing chilled soft drink.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ₹50
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Cold Drink', 50)">
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Dessert -->
+
+            <div class="food-card" data-category="dessert">
+
+                <div class="food-image dessert-bg">
+                    🍰
+                </div>
+
+                <div class="food-info">
+
+                    <span class="food-category">
+                        DESSERT
+                    </span>
+
+                    <h3>
+                        Chocolate Cake
+                    </h3>
+
+                    <p>
+                        Soft chocolate cake with rich frosting.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <strong>
+                            ₹129
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Chocolate Cake', 129)">
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="section about" id="about">
+
+        <div class="about-content">
+
+            <div class="about-text">
+
+                <p class="section-label">
+                    ABOUT US
+                </p>
+
+                <h2>
+                    Good Food.
+                    <span>Good Mood.</span>
+                </h2>
+
+                <p>
+                    At Spice Haven, we believe food should bring
+                    people together. We prepare every dish using
+                    fresh ingredients and carefully selected spices.
+                </p>
+
+                <p>
+                    Whether you're joining us for a family dinner,
+                    a casual lunch or a special celebration,
+                    we're here to make your experience memorable.
+                </p>
+
+
+                <div class="about-features">
+
+                    <div>
+                        ⭐ Fresh Ingredients
+                    </div>
+
+                    <div>
+                        👨‍🍳 Expert Chefs
+                    </div>
+
+                    <div>
+                        ❤️ Made With Love
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-box">
+
+                <div class="about-emoji">
+                    👨‍🍳
+                </div>
+
+                <h3>
+                    Fresh • Tasty • Authentic
+                </h3>
+
+                <p>
+                    Made fresh every day.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="section" id="contact">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                CONTACT
+            </p>
+
+            <h2>
+                Visit or Contact Us
+            </h2>
+
+        </div>
+
+
+        <div class="contact-container">
+
+
+            <div class="contact-info">
+
+                <div class="contact-item">
+
+                    <span>
+                        📍
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Address
+                        </h3>
+
+                        <p>
+                            Mohali, Punjab, India
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span>
+                        📞
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Phone
+                        </h3>
+
+                        <p>
+                            <a href="tel:+919835054271">
+                                +91 98350 54271
+                            </a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span>
+                        💬
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            WhatsApp
+                        </h3>
+
+                        <p>
+                            Order directly through WhatsApp.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="https://wa.me/919835054271"
+                    target="_blank"
+                    class="whatsapp-btn">
+
+                    💬 Chat on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+
+            <form
+                class="contact-form"
+                id="contactForm">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    placeholder="Your Email"
+                    required
+                >
+
+                <textarea
+                    rows="5"
+                    placeholder="Your Message"
+                    required>
+                </textarea>
+
+                <button
+                    type="submit"
+                    class="btn primary-btn">
+
+                    Send Message
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div>
+
+                <h2>
+                    🍽️ Spice Haven
+                </h2>
+
+                <p>
+                    Restaurant Website Demo by WebDukaan
+                </p>
+
+                <p>
+                    Delicious food. Great memories.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#menu">
+                    Menu
+                </a>
+
+                <a href="#offers">
+                    Offers
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Spice Haven Demo • Built by WebDukaan
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= CART ================= -->
+
+    <div
+        class="cart-overlay"
+        id="cartOverlay">
+
+        <div class="cart">
+
+            <div class="cart-header">
+
+                <h2>
+                    🛒 Your Cart
+                </h2>
+
+                <button onclick="closeCart()">
+                    ×
+                </button>
+
+            </div>
+
+
+            <div
+                class="cart-items"
+                id="cartItems">
+
+            </div>
+
+
+            <div class="cart-footer">
+
+                <div class="total">
+
+                    <strong>
+                        Total
+                    </strong>
+
+                    <strong id="cartTotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="whatsapp-btn"
+                    onclick="orderOnWhatsApp()">
+
+                    💬 Order on WhatsApp
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
